@@ -34,6 +34,9 @@ class FizzBuzzSpec extends Specification {
   def shouldBeFizzBuzz: Result = {
     fizzBuzz fizzBuzz 30 must be equalTo "FizzBuzz"
   }
-  def shouldBeANumber = failure
+  def shouldBeANumber = {
+    fizzBuzz fizzBuzz 31 must be equalTo "31"
+  }
+  
   def shouldPrintAFizzBuzzList = failure
 }
