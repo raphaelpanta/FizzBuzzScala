@@ -24,14 +24,16 @@ class FizzBuzzSpec extends Specification {
       """
 
   def shouldBeFizz: Result ={
-    fizzBuzz fizzBuzz 3 must be equalTo("Fizz")
+    fizzBuzz fizzBuzz 3 must be equalTo "Fizz"
   }
   
   def shouldBeBuzz: Result = {
-    fizzBuzz fizzBuzz 5 must be equalTo("Buzz")
+    fizzBuzz fizzBuzz 5 must be equalTo "Buzz"
   }
   
-  def shouldBeFizzBuzz = failure
+  def shouldBeFizzBuzz: Result = {
+    fizzBuzz fizzBuzz 30 must be equalTo "FizzBuzz"
+  }
   def shouldBeANumber = failure
   def shouldPrintAFizzBuzzList = failure
 }
