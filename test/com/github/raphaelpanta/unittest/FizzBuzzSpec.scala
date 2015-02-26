@@ -24,7 +24,7 @@ class FizzBuzzSpec extends Specification {
       """
 
   def shouldBeFizz: Result ={
-    fizzBuzz fizzBuzz 3  must be equalTo("Fizz")
+    fizzBuzz fizzBuzz 3 must be equalTo("Fizz")
   }
   
   def shouldBeBuzz = failure
