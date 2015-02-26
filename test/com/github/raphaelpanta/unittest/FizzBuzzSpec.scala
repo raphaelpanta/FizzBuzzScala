@@ -19,7 +19,7 @@ class FizzBuzzSpec extends Specification {
           by 3 and 5 it should print FizzBuzz $shouldBeFizzBuzz
         When a number is not divisible 
           by 3 or 5 it should print the number $shouldBeANumber
-        From a list of integer 1, 2, 3, 15, 5, 30
+        From a list of integer 1, 2, 3, 15, 10, 30
           it should print a list of Strings like 1, 2, Fizz, FizzBuzz, Buzz, FizzBuzz $shouldPrintAFizzBuzzList
       """
 
@@ -38,5 +38,8 @@ class FizzBuzzSpec extends Specification {
     fizzBuzz fizzBuzz 31 must be equalTo "31"
   }
 
-  def shouldPrintAFizzBuzzList = failure
+  def shouldPrintAFizzBuzzList = {
+    fizzBuzz fizzBuzzList List(1, 2, 3, 15, 10, 30) must be equalTo List("1", "2", "Fizz", "FizzBuzz", "Buzz", "FizzBuzz")
+  }
+
 }

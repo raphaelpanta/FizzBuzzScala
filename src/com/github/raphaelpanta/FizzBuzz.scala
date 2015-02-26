@@ -8,4 +8,8 @@ class FizzBuzz {
     case number if number % 5 == 0 => "Buzz"
     case _ => number toString
   }
+  
+  def fizzBuzzList(numbers: List[Int]): List[String] = {
+    List("")
+  }
 }
