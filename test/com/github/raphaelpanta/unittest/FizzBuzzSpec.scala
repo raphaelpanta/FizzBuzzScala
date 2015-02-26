@@ -23,20 +23,20 @@ class FizzBuzzSpec extends Specification {
           it should print a list of Strings like 1, 2, Fizz, FizzBuzz, Buzz, FizzBuzz $shouldPrintAFizzBuzzList
       """
 
-  def shouldBeFizz: Result ={
+  def shouldBeFizz = {
     fizzBuzz fizzBuzz 3 must be equalTo "Fizz"
   }
-  
-  def shouldBeBuzz: Result = {
+
+  def shouldBeBuzz = {
     fizzBuzz fizzBuzz 5 must be equalTo "Buzz"
   }
-  
-  def shouldBeFizzBuzz: Result = {
+
+  def shouldBeFizzBuzz = {
     fizzBuzz fizzBuzz 30 must be equalTo "FizzBuzz"
   }
   def shouldBeANumber = {
     fizzBuzz fizzBuzz 31 must be equalTo "31"
   }
-  
+
   def shouldPrintAFizzBuzzList = failure
 }
