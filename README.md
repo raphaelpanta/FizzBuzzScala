@@ -1,5 +1,7 @@
 # **FizzBuzzScala**
 
+***Descrição em português mais embaixo***. 
+
 This is my first code in Scala language!
 
 A implementation of *FizzBuzz* in *Scala Language*. 
