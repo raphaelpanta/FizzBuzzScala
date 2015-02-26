@@ -3,10 +3,13 @@ package com.github.raphaelpanta.unittest
 import org.junit.runner.RunWith
 import org.specs2.Specification
 import org.specs2.runner.JUnitRunner
+import com.github.raphaelpanta.FizzBuzz
+import org.specs2.execute.Result
 
 @RunWith(classOf[JUnitRunner])
 class FizzBuzzSpec extends Specification {
 
+  val fizzBuzz = new FizzBuzz
   def is() =
     s2"""
       This is a specification of FizzBuzz
@@ -16,11 +19,14 @@ class FizzBuzzSpec extends Specification {
           by 3 and 5 it should print FizzBuzz $shouldBeFizzBuzz
         When a number is not divisible 
           by 3 or 5 it should print the number $shouldBeANumber
-        From a list of integer 1 to 100
-          it should print a list of FizzBuzz string $shouldPrintAFizzBuzzList
+        From a list of integer 1, 2, 3, 15, 5, 30
+          it should print a list of Strings like 1, 2, Fizz, FizzBuzz, Buzz, FizzBuzz $shouldPrintAFizzBuzzList
       """
 
-  def shouldBeFizz = failure
+  def shouldBeFizz: Result ={
+    fizzBuzz fizzBuzz 3  must be equalTo("Fizz")
+  }
+  
   def shouldBeBuzz = failure
   def shouldBeFizzBuzz = failure
   def shouldBeANumber = failure
